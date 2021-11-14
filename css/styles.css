@@ -1,0 +1,370 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 320px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.navtop, .profile{
+    background-color: #f8f8f8;
+}
+
+.navtop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+li {
+    list-style-type: none;   
+}
+
+.navtop a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.myname{
+    font-size: 2em;
+}
+
+.navtop a:hover,
+.myname:hover, 
+.navbar a:hover, 
+.skill-column:hover{
+    font-family: "Monoton";
+    font-weight: lighter;
+    color:#eaa0a2;
+}
+
+.main-nav{
+    display: inline;
+    text-align:center;
+}
+
+.main-nav a{
+    display: block;
+    text-decoration: none;
+    background-color: white;
+    line-height: 1em;
+    margin: 0.5em auto;
+    padding: 0.5em 6em;
+}
+
+.main-nav a:hover{
+    color: #ffdbdc ;
+    background-color: #bebebe;
+}
+
+.profile{
+    display: flex;
+    flex-direction: column;
+    padding: 0 0.3rem;
+}
+
+.profile p{
+    padding: 0.25rem 0.75rem;
+    text-align: center;
+    font: 1.25em "BenchNine";
+}
+
+.profile img{
+    align-self: center;
+    margin: 2rem 0 1.5rem 0;
+    width: 150px;
+    height: 100px;
+}
+
+/*PORTFOLIO SECTION*/
+
+.name-portfolio, .knowledge{
+    margin: 2em;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.card-project{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*TARGET ALL THE IMAGE*/
+img{
+    width: 280px;
+    height: 200px;
+}
+
+.project-title{
+    font-weight: bold;
+    margin: 25px 0 0 0;
+    padding: 0.25em;
+}
+
+.project-content{
+    margin: 0 25px 15px 25px;
+    padding: 0.125em;
+    text-align: center;
+    font-family: "BenchNine";
+    letter-spacing: 0.05rem;
+    line-height: 1.25em;
+}
+
+/*SKILL SECTION*/
+.knowledge{
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+.skill-title{
+    margin: 10px 0 15px 0;
+}
+
+.knowledge img{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: 15px 0 10px 0;
+}
+
+.skill-column a{
+    text-decoration: none;
+    color: black;
+}
+
+/*CONTACT SECTION*/
+.contact, .navbar{
+    background-color: #d8d8d8;
+    margin:0;
+    padding:0;
+}
+
+.contact-title{
+    text-align: center;
+    margin: 40px 0px 10px 0;
+    padding: 10px 0;
+}
+
+.contact-intro{
+    text-align: center;
+    margin: 0 20px 0 15px;
+    padding: 5px 20px;
+    font: 16px "BenchNine";
+}
+
+.contact p:nth-of-type(2), p:nth-of-type(3){
+    font: 18px "BenchNine";
+    text-align: center;
+}
+
+.contact p > a{
+    font-weight: bold;
+    margin-left: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+hr{
+    width: 90%;
+    margin: 40px auto 20px auto;
+}
+
+/*FOOTER SECTION*/
+
+.navbar{
+    display: flex;
+    font-weight: 700;
+    justify-content: space-between;
+    position: sticky;
+    bottom:0;  
+}
+
+.navbar a{
+    text-decoration: none;
+    color: black;
+    margin: auto;
+    padding: 0;
+}
+
+.nav-item-sub{
+    display: none;
+}
+
+
+
+@media(min-width: 768px){
+    body{
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    .main-nav{
+        display: flex;
+    }   
+
+    .main-nav a{
+        display: flex;
+        text-decoration: none;
+        background-color: transparent;
+        line-height: 1em;
+        align-items: center;
+        margin: 25px;
+        padding: 10px;
+    }
+
+    .profile{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .profile img{
+        flex: 1 25%;
+        align-self: center;
+        margin: 20px 20px 20px 0;
+        padding: 10px 10px 10px 5px;
+        width: 40%;
+        height: 20%;
+    }
+
+    .profile p{
+        flex: 1 75%;
+        margin: 20px 0 20px 25px;
+        padding: 10px 15px 10px 25px;
+        text-align: justify;
+        align-self: center;
+        font: 1.25em "BenchNine";
+    }
+
+    .flex, .skill-intro{
+        display: flex;
+        flex-direction: row;
+        flex-basis: 50%;
+    }
+
+    .flex{
+        flex-wrap: wrap;
+    }
+
+    .skill-intro{
+        margin-bottom: 20px;
+    }
+
+    .card-project, .skill-column{
+        flex-basis: 50%;
+        flex-grow: 1;
+        align-self: center;
+    }
+
+    .card-project p{
+        padding: 10px 20px;
+        margin: 10px 20px;
+    }
+
+    .knowledge hr{
+        display: none;
+    }
+
+    hr{
+        width: 90%;
+        margin: 50px auto 30px auto;
+        justify-content: center;
+    }
+    .nav-item-sub{
+        display: inline;
+    }
+
+    .nav-item-top{
+        display: none;
+    }
+}
+
+@media(min-width: 1024px){
+    body{
+        width: 100%;
+        background-color: #f8f8f8;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navtop{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .myname{
+        margin: 0 15px 15px 35px;
+    }
+
+    .profile img{
+        margin: 15px 15px 15px 50px;
+        padding: 15px 15px 15px 40px;
+    }
+
+    .profile p{
+        margin: 15px 15px 15px 20px;
+        padding: 15px 15px 15px 15px;
+        text-align: justify;
+        align-self: flex-start;
+        font: 1.25em "BenchNine";
+    }
+
+    .middle{
+        margin: 0 35px 15px 35px;
+        padding: 0;
+        justify-content: center;
+        background-color: white;
+    }
+
+    .project-content{
+        margin: 15px 30px;
+        padding: 10px 30px;
+    }
+
+    .card-project, .skill-column{
+        flex-basis: 33%;
+        flex-grow: 1;
+        align-self: center;
+    }
+
+    .skill-column{
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+
+    .skill-column:hover{
+        transform: scale(1.3)
+    }
+
+    .knowledge hr{
+        display: block;
+        margin-bottom: 0;
+    }
+
+    hr{
+        width: 95%;
+        margin: 20px auto;
+        padding: 0;
+    }
+
+    .contact, .navbar{
+        background-color: #f8f8f8;
+    }
+
+    .navbar a{
+        margin: 15px 0 15px 35px;
+    }
+
+    .nav-links{
+        margin: 15px 35px 15px 35px;
+    }
+
+}
